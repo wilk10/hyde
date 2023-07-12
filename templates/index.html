@@ -17,6 +17,10 @@
       <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
       <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
 
+      {% if config.extra.hyde_favicon %}
+        <link rel="shortcut icon" type="image/png" href="{{ get_url(path="favicon.png") }}">
+      {% endif %}
+
       {% if config.generate_feed %}
         <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
       {% endif %}
