@@ -201,7 +201,6 @@ blockquote p:last-child {
 img {
   display: block;
   margin: 0 0 1rem;
-  border-radius: 3rem;
   max-width: 100%;
 }
 
@@ -310,6 +309,9 @@ tbody tr:nth-child(odd) th {
 .post h3 {
   font-family: 'Lemon/Milk light', sans-serif;
   color: #343a40;
+}
+.post img {
+  border-radius: 3rem;
 }
 
 /* Blog post or page title */

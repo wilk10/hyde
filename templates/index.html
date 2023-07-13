@@ -35,7 +35,11 @@
                 <div class="container {% if config.extra.hyde_sticky %}sidebar-sticky{% endif %}">
                     <div class="sidebar-about">
                         {% block sidebar_about %}
+                            {% if config.extra.logo_path %}
+                            <a href="{{ config.base_url }}"><img alt="Logo" src="{{ config.extra.logo_path }}"></a>
+                            {% else %}
                             <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
+                            {% endif %}
                             {% if config.description %}
                             <p class="lead">{{config.description}}</p>
                             {% endif %}
